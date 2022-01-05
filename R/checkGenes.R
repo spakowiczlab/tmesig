@@ -16,5 +16,5 @@ checkGenes <- function(genevec, score){
   all.present <- ifelse(length(missing.genes) >= 1, F, T)
   print(all.present)
 
-  return(outval)
+  return(missing.genes)
 }
