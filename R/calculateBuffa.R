@@ -12,7 +12,7 @@ calculateBuffa <- function(genemat, buffa.genes = inputGenes("Buffa")){
     dplyr::filter(Gene %in% buffa.genes) %>%
     tidyr::gather(-Gene, key = "sample", value = "counts") %>%
     dplyr::group_by(Gene) %>%
-    dplyr::mutate(cut = quantile(counts, .5)) %>%
+    dplyr::mutate(cut = median(counts)) %>%
     dplyr::ungroup() %>%
     dplyr::mutate(score.comp = ifelse(counts > cut, 1, -1)) %>%
     dplyr::group_by(sample) %>%
