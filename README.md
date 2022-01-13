@@ -9,6 +9,7 @@
 Contains functions to generate gene expression signature values from (1) an expression matrix and (2) a list of genes. 
 
 `calculateBuffa` calculates a hypoxia signature from Buffa et al (2010).[1]
+
 `calculateMitoscore` calculates a hypoxia signature from Benej et al (submitted).[2]
 
 ## Installation
