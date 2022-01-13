@@ -1,4 +1,4 @@
-# tmesig <img src="man/figures/tmesig_hex-sticker.png" align="right" width="100" />
+# tmesig <img src="man/figures/hex-sticker.png" align="right" width="100" />
 
 ## Tumor MicroEnvironment expression signatures                    
 
