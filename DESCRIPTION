@@ -3,7 +3,7 @@ Type: Package
 Title: Tumor Micro-Environment expression SIGnatures
 Version: 0.1.0
 Authors@R:
-    person(given = "Rebecca", 
+    c(person(given = "Rebecca", 
             family = "Hoyd",
             role = c("aut", "cre"),
            comment = c(ORCID = "0000-0003-1210-4491")),
@@ -15,6 +15,7 @@ Authors@R:
            family = "Spakowicz",
            email = "daniel.spakowicz@osumc.edu",
            comment = c(ORCID = "0000-0003-2314-6435"))
+     )
 Maintainer: Daniel Spakowicz <daniel.spakowicz@osumc.edu>
 Description: This package contains functions to calcualate expression signatures using gene expression data. Most have been published elsewhere, but not implemented in a package.
 License: MIT
