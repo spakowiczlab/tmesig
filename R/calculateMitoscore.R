@@ -9,7 +9,7 @@
 
 calculateMitoscore <- function(genemat, mito.genes = inputGenes("Mitoscore")){
   tmp <- genemat %>%
-    dplyr::filter(Gene %in% mito.genes.pres) %>%
+    dplyr::filter(Gene %in% mito.genes) %>%
     tidyr::gather(-Gene, key = "sample", value = "counts") %>%
     dplyr::mutate(logged.count = log2(counts+1)) %>%
     dplyr::group_by(sample) %>%
