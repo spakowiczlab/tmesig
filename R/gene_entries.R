@@ -2,7 +2,7 @@
 #'
 #' @param query Name of the signature group. If query is passed "all" function will return all the signature groups
 #'
-#' @return the genes within a desired signature group
+#' @return The genes within a desired signature group
 #' @export
 #'
 #' @examples
