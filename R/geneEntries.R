@@ -6,7 +6,7 @@
 #' @export
 #'
 #' @examples
-gene_entries <- function(query){
+geneEntries <- function(query){
   IFNg_18 <- c("CD3D","IL2RG","NKG7","CIITA","HLA-E","CD3E","CXCR6","CCL5","LAG3","TAGAP","GZMK","CD2", "IDO1","CXCL10","HLA-DRA","STAT1","CXCL13","GZMB")
   WNT <- c("RNF43","BMP4","TSPAN8","PPP1R1B","SLC44A4","C9orf152","VWA2","AXIN2","SP5","NKD1","CFTR","LGR5","ODAM")
   Angiogenesis <- c("VEGFA","CD34","ANGPTL4","KDR","TEK","NDUFA4L2","ANGPT2","ESM1","CXCR7","SEMA5B","FLT1","TIE1","CDH6","DLL4","FLT4","ENPEP")

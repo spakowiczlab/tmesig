@@ -11,9 +11,9 @@
 #' @export
 #'
 #' @examples calculate_avg_z_score(gene_matrix = expressions, gene_list = c("RNF43","BMP4","TSPAN8","PPP1R1B","SLC44A4","C9orf152","VWA2","AXIN2","SP5","NKD1","CFTR"))
-calculate_avg_z_score <- function(gene_matrix, gene_list){
+calculateAvgZScore <- function(gene_matrix, genes){
   gene_missing <- checkGenes(gene_matrix$Gene.Symbol, score = NULL,
-                             expected.genes = gene_list)
+                             expected.genes = genes)
   if(length(gene_missing) > 0){
     mis.genes.short <- paste(gene_missing, collapse = ",")
     warn.message <- paste("Genes missing from set:", mis.genes.short)
@@ -26,7 +26,7 @@ calculate_avg_z_score <- function(gene_matrix, gene_list){
     dplyr::mutate(Average = mean(counts), std_dev = sd(counts))%>%
     dplyr::ungroup()%>%
     dplyr::mutate(z_score = (counts - Average) / std_dev)%>%
-    dplyr::filter(Gene.Symbol %in% gene_list)%>%
+    dplyr::filter(Gene.Symbol %in% genes)%>%
     dplyr::group_by(sample)%>%
     dplyr::summarize(avg_z_score = mean(z_score))
   return(avg_z_score)
