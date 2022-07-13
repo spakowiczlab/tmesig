@@ -1,8 +1,8 @@
 #' Gene Entries
 #'
-#' @param query Name of gene symbol which contains group of genes
+#' @param query Name of the signature group. If query is passed "all" function will return all the signature groups
 #'
-#' @return signature group 
+#' @return the genes within a desired signature group
 #' @export
 #'
 #' @examples
@@ -37,6 +37,10 @@ gene_entries <- function(query){
   TLS <- c("CD79B", "CD1D", "CCR6", "LAT", "SKAP1", "CETP", "EIF1AY", "RBP5", "PTGDS")
   gene_list <- list(IFNg_18, WNT, Angiogenesis, Auslander, Chaurio, Chemokine, Cytotoxic, Effector_T_Cell, Glycolysis, gMDSC, Huang_NRS, Hypoxia, IFNg_6, IFNg_Effector_T_Cells, Ipi_neoadjuvant, MHC_I, MHC_II, mMDSC, MYC, Ock_Immune_Sig_Score, Pan, Proliferation, Ras, Roh_Immune_Score, Rooney_Immune_Cytolytic, Stroma, TIP_Hot, TLS)
   names(gene_list) <- c("IFNg_18", "WNT", "Angiogenesis", "Auslander", "Chaurio", "Chemokine", "Cytotoxic", "Effector_T_Cell", "Glycolysis", "gMDSC", "Huang_NRS", "Hypoxia", "IFNg_6", "IFNg_Effector_T_Cells", "Ipi_neoadjuvant", "MHC_I", "MHC_II", "mMDSC", "MYC", "Ock_Immune_Sig_Score", "Pan", "Proliferation", "Ras", "Roh_Immune_Score", "Rooney_Immune_Cytolytic", "Stroma", "TIP_Hot", "TLS")
+  
+  if(query == "all"){
+    return(gene_list)
+  }
   
   genes_queried <- gene_list[[query]]
   return(genes_queried)
