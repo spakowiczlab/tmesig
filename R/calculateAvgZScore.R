@@ -1,16 +1,16 @@
 #' Calculate Average Z Score
-#'Calculates the average z score for any given genes within a gene score
+#'Calculates the average z score for any given genes within a gene score. This function was originally intended to work in conjunction with the geneEntries function
 #' @param gene_matrix a data frame where columns are samples and rows are genes. Gene symbols are expected as a column labeled "Gene.Symbol".
-#' @param gene_list a group of genes within a certain gene symbol
+#' @param genes the specific gene signature that will be used
 #'
 #' @return A data set with all the genes within the requested gene symbol
 #' group and the average z score for each gene. Check if all the
-#' genes within "gene_list" are present in "gene_matrix".
+#' genes within "genes" are present in "gene_matrix".
 #' Function will return true if all genes are present and
 #' return false if there are missing genes and list out missing genes.
 #' @export
 #'
-#' @examples calculate_avg_z_score(gene_matrix = expressions, gene_list = c("RNF43","BMP4","TSPAN8","PPP1R1B","SLC44A4","C9orf152","VWA2","AXIN2","SP5","NKD1","CFTR"))
+#' @examples calculateAvgZScore(gene_matrix = dataframe, genes = geneEntries("IFNg_18")), calculateAvgZScore(gene_matrix = expressions, gene_list = c("RNF43","BMP4","TSPAN8","PPP1R1B","SLC44A4","C9orf152","VWA2","AXIN2","SP5","NKD1","CFTR"))
 calculateAvgZScore <- function(gene_matrix, genes){
   gene_missing <- checkGenes(gene_matrix$Gene.Symbol, score = NULL,
                              expected.genes = genes)
