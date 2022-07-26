@@ -4,10 +4,10 @@
 \alias{calculateMitoscore}
 \title{Calculate the Mitoscore}
 \usage{
-calculateMitoscore(genemat, mito.genes = inputGenes("Mitoscore"))
+calculateMitoscore(gene_matrix, mito.genes = inputGenes("Mitoscore"))
 }
 \arguments{
-\item{genemat}{A data frame of expression counts where rows are genes, columns are samples, and the gene symbols are available in a column defined as "Gene".}
+\item{gene_matrix}{A data frame of expression counts where rows are genes, columns are samples, and the gene symbols are available in a column defined as "Gene".}
 
 \item{mito.genes}{A character vector of the genes to use when calculating the score. May need to be altered due to changing gene labels.}
 }

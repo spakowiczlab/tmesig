@@ -4,10 +4,10 @@
 \alias{calculateBuffa}
 \title{Calculate the Buffa hypoxia score}
 \usage{
-calculateBuffa(genemat, buffa.genes = inputGenes("Buffa"))
+calculateBuffa(gene_matrix, buffa.genes = inputGenes("Buffa"))
 }
 \arguments{
-\item{genemat}{A data frame of expression counts where rows are genes, columns are samples, and the gene symbols are available in a column defined as "Gene".}
+\item{gene_matrix}{A data frame of expression counts where rows are genes, columns are samples, and the gene symbols are available in a column defined as "Gene".}
 
 \item{buffa.genes}{A character vector of the genes to use when calculating the score. May need to be altered due to changing gene labels.}
 }

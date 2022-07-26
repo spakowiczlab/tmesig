@@ -9,13 +9,13 @@
 #' @export
 
 
-checkGenes <- function(genevec, score = NULL, expected.genes = NULL){
+checkGenes <- function(genes, score = NULL, expected.genes = NULL){
 
   if(!is.null(score)){
     expected.genes <- inputGenes(score)
   }
 
-  missing.genes <- setdiff(expected.genes, genevec)
+  missing.genes <- setdiff(expected.genes, genes)
 
   all.present <- ifelse(length(missing.genes) >= 1, F, T)
   print(all.present)

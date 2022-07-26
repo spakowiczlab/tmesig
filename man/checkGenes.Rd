@@ -4,14 +4,14 @@
 \alias{checkGenes}
 \title{Check presence of required genes}
 \usage{
-checkGenes(genevec, score = NULL, expected.genes = NULL)
+checkGenes(genes, score = NULL, expected.genes = NULL)
 }
 \arguments{
-\item{genevec}{A character vector containing the genes available in the data set the calculation is to be performed on.}
-
 \item{score}{The name of the score whose dependent genes should be checked.}
 
 \item{expected.genes}{A vector of the genes expected in the data. Can be provided instead of score.}
+
+\item{genevec}{A character vector containing the genes available in the data set the calculation is to be performed on.}
 }
 \value{
 A character vector containing any genes required by the score and missing in the data set.
