@@ -4,4 +4,4 @@ scn.form <- scn.genes[,7:8]
 colnames(scn.form) <- c("gene", "PC1")
 SCNweights <- scn.form
 
-save(SCNweights, file = "../Data/SCNweights.RData")
+save(SCNweights, file = "../Data/SCNweights.rda")
