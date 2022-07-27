@@ -36,9 +36,9 @@ geneEntries <- function(query){
   Stroma <- c("AEBP1","COL1A2","CRISPLD2","SPARC","COL3A1","COL5A1","VCAN","COL15A1","MMP2","PDGFRB","PCOLCE","OLFML2B","COL6A3","THY1","FSTL1","GPR124","EDNRA","MXRA8","THBS2","AXL","COL5A2","NID2","COL8A1","DCN","GGT5","ANGPTL2","CD248","LAMA4","GLT8D2","FBN1","ELTD1","CCDC80","CD93","RUNX1T1","LRRC32","MSRB3","HEG1","COL6A2","HSPA12B","OLFML1","TSHZ3","ANTXR1","FILIP1L","KIAA1462","ITGA11","WISP1","CDH11","ECM2","FAM26E","PODN","ADAMTS2")
   TIP_Hot <- c("CXCL9","CXCL10","CXCL11", "CXCR3","CD3","CD4","CD8a","CD8b","CD274","PDCD1","CXCR4","CCL5")
   TLS <- c("CD79B", "CD1D", "CCR6", "LAT", "SKAP1", "CETP", "EIF1AY", "RBP5", "PTGDS")
-  LKB1-loss <- c("AVPI1", "BAG1", "CPS1", "DUSP4", "FGA", "GLCE", "HAL", "IRS2", "MUC5AC", "PDE4D", "PTP4A1", "RFK", "SIK1", "TACC2", "TESC", "TFF1")
-  gene_list <- list(IFNg_18, WNT, Adenosine, Angiogenesis, Auslander, Chaurio, Chemokine, Cytotoxic, Effector_T_Cell, Glycolysis, gMDSC, Huang_NRS, Hypoxia, IFNg_6, IFNg_Effector_T_Cells, Ipi_neoadjuvant, MHC_I, MHC_II, mMDSC, MYC, Ock_Immune_Sig_Score, Pan, Proliferation, Ras, Roh_Immune_Score, Rooney_Immune_Cytolytic, Stroma, TIP_Hot, TLS, LKB1-loss)
-  names(gene_list) <- c("IFNg_18", "WNT", "Adenosine", "Angiogenesis", "Auslander", "Chaurio", "Chemokine", "Cytotoxic", "Effector_T_Cell", "Glycolysis", "gMDSC", "Huang_NRS", "Hypoxia", "IFNg_6", "IFNg_Effector_T_Cells", "Ipi_neoadjuvant", "MHC_I", "MHC_II", "mMDSC", "MYC", "Ock_Immune_Sig_Score", "Pan", "Proliferation", "Ras", "Roh_Immune_Score", "Rooney_Immune_Cytolytic", "Stroma", "TIP_Hot", "TLS", "LKB1-loss")
+  LKB1_loss <- c("AVPI1", "BAG1", "CPS1", "DUSP4", "FGA", "GLCE", "HAL", "IRS2", "MUC5AC", "PDE4D", "PTP4A1", "RFK", "SIK1", "TACC2", "TESC", "TFF1")
+  gene_list <- list(IFNg_18, WNT, Adenosine, Angiogenesis, Auslander, Chaurio, Chemokine, Cytotoxic, Effector_T_Cell, Glycolysis, gMDSC, Huang_NRS, Hypoxia, IFNg_6, IFNg_Effector_T_Cells, Ipi_neoadjuvant, MHC_I, MHC_II, mMDSC, MYC, Ock_Immune_Sig_Score, Pan, Proliferation, Ras, Roh_Immune_Score, Rooney_Immune_Cytolytic, Stroma, TIP_Hot, TLS, LKB1_loss)
+  names(gene_list) <- c("IFNg_18", "WNT", "Adenosine", "Angiogenesis", "Auslander", "Chaurio", "Chemokine", "Cytotoxic", "Effector_T_Cell", "Glycolysis", "gMDSC", "Huang_NRS", "Hypoxia", "IFNg_6", "IFNg_Effector_T_Cells", "Ipi_neoadjuvant", "MHC_I", "MHC_II", "mMDSC", "MYC", "Ock_Immune_Sig_Score", "Pan", "Proliferation", "Ras", "Roh_Immune_Score", "Rooney_Immune_Cytolytic", "Stroma", "TIP_Hot", "TLS", "LKB1_loss")
 
   if(query == "all"){
     return(gene_list)
