@@ -12,8 +12,9 @@ Contains functions to generate gene expression signature values from (1) an expr
 
 `calculateMitoscore` calculates a hypoxia signature from Benej et al (submitted).[2]
 
-`calulateWNT` calculates a WNT-signaling signature from Cristescu et al, Clin Cancer Res., 2022 [3]
+`calculateAvgZScore` calculates one or more signatures for which a vector of genes is z-score transformed and then the mean is reported.
 
+Please see the (user manual)[https://github.com/spakowiczlab/tmesig/blob/master/doc/tmesig%20documentation.Rmd] for more information. 
 
 ## Installation
 
@@ -27,4 +28,3 @@ devtools::install_github("spakowiczlab/tmesig")
 
 1. Buffa, F. M., et al. "Large meta-analysis of multiple cancers reveals a common, compact and highly prognostic hypoxia metagene." British journal of cancer 102.2 (2010): 428-435.
 2. Benej, M., et al. "Oxygen demand driven tumor hypoxia – a new perspective on the genesis and treatment of hypoxia." _submitted_
-3. Cristescu et al, Clin Cancer Res., 2022 https://doi.org/10.1158/1078-0432.CCR-21-3329
