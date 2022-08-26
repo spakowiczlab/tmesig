@@ -14,7 +14,7 @@ Contains functions to generate gene expression signature values from (1) an expr
 
 `calculateAvgZScore` calculates one or more signatures for which a vector of genes is z-score transformed and then the mean is reported.
 
-Please see the [user manual](https://github.com/spakowiczlab/tmesig/blob/master/doc/tmesig%20documentation.Rmd) for more information. 
+Please see the [user manual](https://github.com/spakowiczlab/tmesig/blob/master/doc/tmesig-documentation.md) for more information. 
 
 ## Installation
 
