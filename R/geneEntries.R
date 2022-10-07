@@ -148,8 +148,21 @@ geneEntries <- function(query){
   TLS <- c("CD79B", "CD1D", "CCR6", "LAT", "SKAP1", "CETP", "EIF1AY", "RBP5", "PTGDS")
   LKB1_loss <- c("AVPI1", "BAG1", "CPS1", "DUSP4", "FGA", "GLCE", "HAL", "IRS2",
                  "MUC5AC", "PDE4D", "PTP4A1", "RFK", "SIK1", "TACC2", "TESC", "TFF1")
-  gene_list <- list(IFNg_18, WNT, Adenosine, Angiogenesis, Auslander, Chaurio, Chemokine, Cytotoxic, Effector_T_Cell, Glycolysis, gMDSC, Huang_NRS, Hypoxia, IFNg_6, IFNg_Effector_T_Cells, Ipi_neoadjuvant, MHC_I, MHC_II, mMDSC, MYC, Ock_Immune_Sig_Score, Pan, Proliferation, Ras, Roh_Immune_Score, Rooney_Immune_Cytolytic, Stroma, TIP_Hot, TLS, LKB1_loss)
-  names(gene_list) <- c("IFNg_18", "WNT", "Adenosine", "Angiogenesis", "Auslander", "Chaurio", "Chemokine", "Cytotoxic", "Effector_T_Cell", "Glycolysis", "gMDSC", "Huang_NRS", "Hypoxia", "IFNg_6", "IFNg_Effector_T_Cells", "Ipi_neoadjuvant", "MHC_I", "MHC_II", "mMDSC", "MYC", "Ock_Immune_Sig_Score", "Pan", "Proliferation", "Ras", "Roh_Immune_Score", "Rooney_Immune_Cytolytic", "Stroma", "TIP_Hot", "TLS", "LKB1_loss")
+  Tcell.Senescence <- c("p16", "ARF", "B3GAT1", "KLRG1"), 
+  
+  gene_list <- list(IFNg_18, WNT, Adenosine, Angiogenesis, Auslander, 
+                    Chaurio, Chemokine, Cytotoxic, Effector_T_Cell, Glycolysis,
+                    gMDSC, Huang_NRS, Hypoxia, IFNg_6, IFNg_Effector_T_Cells,
+                    Ipi_neoadjuvant, MHC_I, MHC_II, mMDSC, MYC, Ock_Immune_Sig_Score, 
+                    Pan, Proliferation, Ras, Roh_Immune_Score, Rooney_Immune_Cytolytic, 
+                    Stroma, TIP_Hot, TLS, LKB1_loss, Tcell.Senescence)
+  
+  names(gene_list) <- c("IFNg_18", "WNT", "Adenosine", "Angiogenesis", "Auslander",
+                        "Chaurio", "Chemokine", "Cytotoxic", "Effector_T_Cell", "Glycolysis",
+                        "gMDSC", "Huang_NRS", "Hypoxia", "IFNg_6", "IFNg_Effector_T_Cells",
+                        "Ipi_neoadjuvant", "MHC_I", "MHC_II", "mMDSC", "MYC", "Ock_Immune_Sig_Score",
+                        "Pan", "Proliferation", "Ras", "Roh_Immune_Score", "Rooney_Immune_Cytolytic",
+                        "Stroma", "TIP_Hot", "TLS", "LKB1_loss", "Tcell.Senescence")
 
   if(query == "all"){
     return(gene_list)
