@@ -148,7 +148,7 @@ geneEntries <- function(query){
   TLS <- c("CD79B", "CD1D", "CCR6", "LAT", "SKAP1", "CETP", "EIF1AY", "RBP5", "PTGDS")
   LKB1_loss <- c("AVPI1", "BAG1", "CPS1", "DUSP4", "FGA", "GLCE", "HAL", "IRS2",
                  "MUC5AC", "PDE4D", "PTP4A1", "RFK", "SIK1", "TACC2", "TESC", "TFF1")
-  Tcell.Senescence <- c("p16", "ARF", "B3GAT1", "KLRG1"), 
+  Tcell.Senescence <- c("p16", "ARF", "B3GAT1", "KLRG1") 
   
   gene_list <- list(IFNg_18, WNT, Adenosine, Angiogenesis, Auslander, 
                     Chaurio, Chemokine, Cytotoxic, Effector_T_Cell, Glycolysis,
