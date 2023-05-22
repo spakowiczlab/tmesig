@@ -149,20 +149,24 @@ geneEntries <- function(query){
   LKB1_loss <- c("AVPI1", "BAG1", "CPS1", "DUSP4", "FGA", "GLCE", "HAL", "IRS2",
                  "MUC5AC", "PDE4D", "PTP4A1", "RFK", "SIK1", "TACC2", "TESC", "TFF1")
   Tcell.Senescence <- c("p16", "ARF", "B3GAT1", "KLRG1") 
+  CellDeath <- c("PRKAA2", "ATG12", "ULK2", "ATG5", "GABARAPL1", "BCL2L1", "CASP9",
+                "CYCS", "IL1A", "PIK3CG", "TNFRSF10D", "FADD", "BIRC3",
+                "FAS", "DNM1L")
   
   gene_list <- list(IFNg_18, WNT, Adenosine, Angiogenesis, Auslander, 
                     Chaurio, Chemokine, Cytotoxic, Effector_T_Cell, Glycolysis,
                     gMDSC, Huang_NRS, Hypoxia, IFNg_6, IFNg_Effector_T_Cells,
                     Ipi_neoadjuvant, MHC_I, MHC_II, mMDSC, MYC, Ock_Immune_Sig_Score, 
                     Pan, Proliferation, Ras, Roh_Immune_Score, Rooney_Immune_Cytolytic, 
-                    Stroma, TIP_Hot, TLS, LKB1_loss, Tcell.Senescence)
+                    Stroma, TIP_Hot, TLS, LKB1_loss, Tcell.Senescence, CellDeath)
   
   names(gene_list) <- c("IFNg_18", "WNT", "Adenosine", "Angiogenesis", "Auslander",
                         "Chaurio", "Chemokine", "Cytotoxic", "Effector_T_Cell", "Glycolysis",
                         "gMDSC", "Huang_NRS", "Hypoxia", "IFNg_6", "IFNg_Effector_T_Cells",
                         "Ipi_neoadjuvant", "MHC_I", "MHC_II", "mMDSC", "MYC", "Ock_Immune_Sig_Score",
                         "Pan", "Proliferation", "Ras", "Roh_Immune_Score", "Rooney_Immune_Cytolytic",
-                        "Stroma", "TIP_Hot", "TLS", "LKB1_loss", "Tcell.Senescence")
+                        "Stroma", "TIP_Hot", "TLS", "LKB1_loss", "Tcell.Senescence",
+                        "CellDeath")
 
   if(query == "all"){
     return(gene_list)
