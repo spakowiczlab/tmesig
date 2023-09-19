@@ -58,6 +58,7 @@ geneEntries <- function(query){
   MHC_I <- c("HLA-A", "HLA-B", "HLA-C", "B2M", "TAP1", "TAP2")
   MHC_II <- c("HLA-DMA", "HLA-DMB", "HLA-DOA", "HLA-DOB", "HLA-DPA1", "HLA-DPB1", "HLA-DQA1",
               "HLA-DQA2", "HLA-DQB1", "HLA-DQB2", "HLA-DRA", "HLA-DRB1", "HLA-DRB5")
+  MHC_II_Hsueh <- c("CIITA", "HLA-DRA", "CD74", "HLA-DMA", "HLA-DMB", "H2-Eb1", "HLA-DOA", "HLA-DOB", "CREB1")
   mMDSC <- c("CD74","CTSB","FCER1G","HLA-DRA","IFI30","HLA-DMB","C1QC","CD53","APOC1",
              "CD14","FCGR2A","HLA-DMA","LAPTM5","SRGN","TYROBP","ALOX5AP","C1QB",
              "HCLS1","ITGAX","ITGB2","RNASE6","LST1","GMFG","LILRB4","C3AR1","C5AR1",
@@ -148,22 +149,22 @@ geneEntries <- function(query){
   TLS <- c("CD79B", "CD1D", "CCR6", "LAT", "SKAP1", "CETP", "EIF1AY", "RBP5", "PTGDS")
   LKB1_loss <- c("AVPI1", "BAG1", "CPS1", "DUSP4", "FGA", "GLCE", "HAL", "IRS2",
                  "MUC5AC", "PDE4D", "PTP4A1", "RFK", "SIK1", "TACC2", "TESC", "TFF1")
-  Tcell.Senescence <- c("p16", "ARF", "B3GAT1", "KLRG1") 
+  Tcell.Senescence <- c("p16", "ARF", "B3GAT1", "KLRG1")
   CellDeath <- c("PRKAA2", "ATG12", "ULK2", "ATG5", "GABARAPL1", "BCL2L1", "CASP9",
                 "CYCS", "IL1A", "PIK3CG", "TNFRSF10D", "FADD", "BIRC3",
                 "FAS", "DNM1L")
-  
-  gene_list <- list(IFNg_18, WNT, Adenosine, Angiogenesis, Auslander, 
+
+  gene_list <- list(IFNg_18, WNT, Adenosine, Angiogenesis, Auslander,
                     Chaurio, Chemokine, Cytotoxic, Effector_T_Cell, Glycolysis,
                     gMDSC, Huang_NRS, Hypoxia, IFNg_6, IFNg_Effector_T_Cells,
-                    Ipi_neoadjuvant, MHC_I, MHC_II, mMDSC, MYC, Ock_Immune_Sig_Score, 
-                    Pan, Proliferation, Ras, Roh_Immune_Score, Rooney_Immune_Cytolytic, 
+                    Ipi_neoadjuvant, MHC_I, MHC_II, MHC_II_Hsueh, mMDSC, MYC, Ock_Immune_Sig_Score,
+                    Pan, Proliferation, Ras, Roh_Immune_Score, Rooney_Immune_Cytolytic,
                     Stroma, TIP_Hot, TLS, LKB1_loss, Tcell.Senescence, CellDeath)
-  
+
   names(gene_list) <- c("IFNg_18", "WNT", "Adenosine", "Angiogenesis", "Auslander",
                         "Chaurio", "Chemokine", "Cytotoxic", "Effector_T_Cell", "Glycolysis",
                         "gMDSC", "Huang_NRS", "Hypoxia", "IFNg_6", "IFNg_Effector_T_Cells",
-                        "Ipi_neoadjuvant", "MHC_I", "MHC_II", "mMDSC", "MYC", "Ock_Immune_Sig_Score",
+                        "Ipi_neoadjuvant", "MHC_I", "MHC_II", "MHC_II_Hsueh", "mMDSC", "MYC", "Ock_Immune_Sig_Score",
                         "Pan", "Proliferation", "Ras", "Roh_Immune_Score", "Rooney_Immune_Cytolytic",
                         "Stroma", "TIP_Hot", "TLS", "LKB1_loss", "Tcell.Senescence",
                         "CellDeath")
