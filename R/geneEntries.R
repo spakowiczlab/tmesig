@@ -24,6 +24,16 @@ geneEntries <- function(query){
   Chaurio <- c("CD3E", "CD8A", "IFNG", "PRF1", "CXCL13", "IGHA1", "IGHG1")
   Chemokine <- c("CCL2","CCL3","CCL4","CCL5","CCL8","CCL18","CCL19","CCL21","CXCL9",
                  "CXCL10","CXCL11","CXCL13")
+  Chemotaxis <- c("C5AR1", "CCL1", "CCL11", "CCL12", "CCL17", "CCL19", "CCL2",
+                  "CCL20", "CCL21A", "CCL21B", "CCL21C", "CCL22", "CCL24", "CCL25",
+                  "CCL26", "CCL3", "CCL4", "CCL5", "CCL6", "CCL7", "CCL8", "CCL9",
+                  "CKLF", "CSF3R", "CX3CL1", "CXADR", "CXCL1", "CXCL10", "CXCL13",
+                  "CXCL15", "CXCL2", "CXCL3", "CXCL5", "CXCL9", "CXCR1", "CXCR2",
+                  "EDN3", "FCER1G", "FCGR3", "GBF1", "GM2564", "IFNG", "IL17B",
+                  "IL1B", "IL1F10", "IL1RN", "ITGA1", "ITGA9", "ITGAM", "ITGB2",
+                  "LGALS3", "NCKAP1L", "PDE4B", "PDE4D", "PF4", "PLA2G1B", "PPBP",
+                  "PREX1", "PRKCA", "S100A8", "S100A9", "SLC37A4", "SPP1", "SYK",
+                  "TGFB2", "TREM1", "TREM3", "VAV1", "VAV3", "XCL1")
   Cytotoxic <- c("CD247", "CD2", "CD3E", "GZMH", "NKG7", "PRF1", "GZMK")
   Effector_T_Cell <- c("GZMA","GZMB","PRF1","IFNG","EOMES", "CD8A")
   Glycolysis <- c("ENO1","GSTP1","LDHA","TPI1","ERO1L","PGK1","PFKP","SLC2A1",
@@ -85,6 +95,10 @@ geneEntries <- function(query){
            "NOP16","NOP2","NPM3","PAICS","TBRG4","MRPL12","EXOSC4","XPO5","BYSL",
            "C19orf48","FARSA","CCDC86","BCL2L12","C10orf2","IPO4","PUS1","RPP40",
            "TOP1MT","RRP9","RANBP1","CDC25A","WDR4")
+  NADPH_Oxidase <- c("CYBB", "CYBA", "RAC2", "RAC1", "NCF2", "NCF1", "NCF4")
+  Neutrophil_Activation <- c("ABR", "PTAFR", "TYROBP", "STX11", "BCR", "SYK", "VAMP7", "DNASE1",
+                             "DNASE1L3", "FCER1G", "PRAM1", "ITGB2", "ITGAM", "CD177", "ANXA3",
+                             "MYO1F")
   Ock_Immune_Sig_Score <- c("ACSL3","AP2B1","APOL6","ARHGAP15","ARHGAP9","ARHGDIB",
                             "ATP6V0E2-AS1","B2M","BTN3A1","BTN3A3","CCL5","CD8A","CD8B",
                             "CEP72","CGREF1","CXCL10","CXCL2","CXCL3","CXCL9","CYTIP",
@@ -102,6 +116,12 @@ geneEntries <- function(query){
                             "UTY","YME1L1","ZBTB8A")
   Pan <- c("BLM","CDK12","ERCC2","EXO1","FANCA","FANCM","KNTC1","MDC1","MLH3",
            "MSH2","MSH3","PALB2","POLD1","POLE","PRKDC","RAD50","SHPRH","TOPBP1")
+  Phagocytosis <- c("ABCA1", "ADGRB1", "AIF1", "ARHGAP12", "ARHGAP25", "BECN1",
+                    "BIN2", "CDC42", "CLCN3", "ELMO1", "FCER1G", "FCGR1", "FCGR3",
+                    "GSN", "GULP1", "IGLL1", "ITGAM", "ITGB2", "MARCO", "MEGF10",
+                    "MFGE8", "MSR1", "MYH9", "RAC1", "RAC3", "RHOBTB1", "RHOBTB2",
+                    "SH3BP1", "SIRPA", "THBS1", "TREM2", "TREML4", "VAMP7", "XKR4",
+                    "XKR6", "XKR7", "XKR8", "XKR9")
   Proliferation <- c("H2AFZ","HMGB2","HMGA1","MCM7","PCNA","UBE2C","NCAPD2","RFC4",
                      "SNRPD1","NUSAP1","CKS2","PTTG1","KNTC1","KPNA2","ACTL6A","DKC1",
                      "KIAA0101","UBE2T","FEN1","SMC4","CEP55","DNMT1","MCM2","CENPW",
@@ -155,19 +175,21 @@ geneEntries <- function(query){
                 "FAS", "DNM1L")
 
   gene_list <- list(IFNg_18, WNT, Adenosine, Angiogenesis, Auslander,
-                    Chaurio, Chemokine, Cytotoxic, Effector_T_Cell, Glycolysis,
+                    Chaurio, Chemokine, Chemotaxis, Cytotoxic, Effector_T_Cell, Glycolysis,
                     gMDSC, Huang_NRS, Hypoxia, IFNg_6, IFNg_Effector_T_Cells,
-                    Ipi_neoadjuvant, MHC_I, MHC_II, MHC_II_Hsueh, mMDSC, MYC, Ock_Immune_Sig_Score,
-                    Pan, Proliferation, Ras, Roh_Immune_Score, Rooney_Immune_Cytolytic,
-                    Stroma, TIP_Hot, TLS, LKB1_loss, Tcell.Senescence, CellDeath)
+                    Ipi_neoadjuvant, MHC_I, MHC_II, MHC_II_Hsueh, mMDSC, MYC, NADPH_Oxidase,
+                    Neutrophil_Activation,Ock_Immune_Sig_Score, Pan, Phagocytosis , Proliferation,
+                    Ras, Roh_Immune_Score, Rooney_Immune_Cytolytic, Stroma, TIP_Hot,
+                    TLS, LKB1_loss, Tcell.Senescence, CellDeath)
 
   names(gene_list) <- c("IFNg_18", "WNT", "Adenosine", "Angiogenesis", "Auslander",
-                        "Chaurio", "Chemokine", "Cytotoxic", "Effector_T_Cell", "Glycolysis",
-                        "gMDSC", "Huang_NRS", "Hypoxia", "IFNg_6", "IFNg_Effector_T_Cells",
-                        "Ipi_neoadjuvant", "MHC_I", "MHC_II", "MHC_II_Hsueh", "mMDSC", "MYC", "Ock_Immune_Sig_Score",
-                        "Pan", "Proliferation", "Ras", "Roh_Immune_Score", "Rooney_Immune_Cytolytic",
-                        "Stroma", "TIP_Hot", "TLS", "LKB1_loss", "Tcell.Senescence",
-                        "CellDeath")
+                        "Chaurio", "Chemokine", "Chemotaxis", "Cytotoxic", "Effector_T_Cell",
+                        "Glycolysis","gMDSC", "Huang_NRS", "Hypoxia", "IFNg_6", "IFNg_Effector_T_Cells",
+                        "Ipi_neoadjuvant", "MHC_I", "MHC_II", "MHC_II_Hsueh", "mMDSC", "MYC",
+                        "NADPH_Oxidase", "Neutrophil_Activation", "Ock_Immune_Sig_Score",
+                        "Pan", "Phagocytosis", "Proliferation", "Ras", "Roh_Immune_Score",
+                        "Rooney_Immune_Cytolytic", "Stroma", "TIP_Hot", "TLS", "LKB1_loss",
+                        "Tcell.Senescence", "CellDeath")
 
   if(query == "all"){
     return(gene_list)
