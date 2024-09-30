@@ -12,6 +12,8 @@ knitr::opts_chunk$set(echo = TRUE)
 ```{r, echo=F, message=F, warning=F}
 library(tidyverse)
 library(flextable)
+library(readxl)
+library(tmesig)
 ```
 ## Z Score Calculations
 
@@ -19,7 +21,8 @@ library(flextable)
 `calculate_avg_z_score` is a function that takes a data frame and calculates the average z score for all the values in a given data set
 
 ```{r calculateAvgZScore, eval=F}
-calculateAvgZScore(gene_matrix = expressions, gene_list = c("RNF43","BMP4","TSPAN8","PPP1R1B","SLC44A4","C9orf152","VWA2","AXIN2","SP5","NKD1","CFTR","LGR5","ODAM"))
+calculateAvgZScore(gene_matrix = expressions, 
+                   gene_list = c("RNF43","BMP4","TSPAN8","PPP1R1B","SLC44A4","C9orf152","VWA2","AXIN2","SP5","NKD1","CFTR","LGR5","ODAM"))
 ```
 
 ### geneEntries
@@ -28,7 +31,6 @@ calculateAvgZScore(gene_matrix = expressions, gene_list = c("RNF43","BMP4","TSPA
 ```{r geneEntries, eval=F}
 geneEntries("IFNg_18")
 ```
-
 
 `calculate_avg_z_score` can be used with `gene_entires` to pull signatures
 ```{r calculate_avg_z_score2, eval=F}
@@ -39,7 +41,7 @@ calculate_avg_z_score(gene_matrix = expressions, gene_list = gene_entries("IFNg_
 The table below includes each of the signatures along that we have implemented into the geneEntries function
 
 ```{r, eval=T, echo=F, warning=F}
-library(readxl)
+
 Gene_signatures <- read_excel("../Data/Gene_signatures.xlsx", sheet = "Full-Sheet") 
 Gene_signatures %>% flextable()
 ```
