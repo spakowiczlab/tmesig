@@ -18,9 +18,12 @@ geneEntries <- function(query){
                  "ADORA3", "ENTPD1", "CD38")
   Angiogenesis <- c("VEGFA","CD34","ANGPTL4","KDR","TEK","NDUFA4L2","ANGPT2","ESM1",
                     "CXCR7","SEMA5B","FLT1","TIE1","CDH6","DLL4","FLT4","ENPEP")
+  Apoptosis <- c("CASP3", "CASP7", "CASP8", "CASP9", "BAX", "BAK1", "BOK", "BCL2",
+                 "BCL2L1", "MCL1", "APAF1", "CYCS")
   Auslander <- c("CD86", "CD40", "PD-1", "OX40L", "CD28", "PDL-1", "CD80",
                  "VISTA", "TIM-3", "HVEM", "CTLA4", "CD276", "CD27", "CD200",
                  "CD137L")
+  Autophagy <- c("ATG5", "ATG7", "MAP1LC3A", "MAP1LC3B", "TFEB")
   Chaurio <- c("CD3E", "CD8A", "IFNG", "PRF1", "CXCL13", "IGHA1", "IGHG1")
   Chemokine <- c("CCL2","CCL3","CCL4","CCL5","CCL8","CCL18","CCL19","CCL21","CXCL9",
                  "CXCL10","CXCL11","CXCL13")
@@ -36,6 +39,7 @@ geneEntries <- function(query){
                   "TGFB2", "TREM1", "TREM3", "VAV1", "VAV3", "XCL1")
   Cytotoxic <- c("CD247", "CD2", "CD3E", "GZMH", "NKG7", "PRF1", "GZMK")
   Effector_T_Cell <- c("GZMA","GZMB","PRF1","IFNG","EOMES", "CD8A")
+  Ferroptosis <- c("GPX4", "ACSL4", "SLC7A11")
   Glycolysis <- c("ENO1","GSTP1","LDHA","TPI1","ERO1L","PGK1","PFKP","SLC2A1",
                   "CEP55","TEAD4","ADM","BAK1","PLAUR","TUBA1C","CDC20","IL8",
                   "MTHFD1L","S100A9","PDK1","CDCP1","SLC16A3","EPHA2","PLK1",
@@ -96,6 +100,7 @@ geneEntries <- function(query){
            "C19orf48","FARSA","CCDC86","BCL2L12","C10orf2","IPO4","PUS1","RPP40",
            "TOP1MT","RRP9","RANBP1","CDC25A","WDR4")
   NADPH_Oxidase <- c("CYBB", "CYBA", "RAC2", "RAC1", "NCF2", "NCF1", "NCF4")
+  Necroptosis <- c("RIPK1", "RIPK3", "MLKL")
   Neutrophil_Activation <- c("ABR", "PTAFR", "TYROBP", "STX11", "BCR", "SYK", "VAMP7", "DNASE1",
                              "DNASE1L3", "FCER1G", "PRAM1", "ITGB2", "ITGAM", "CD177", "ANXA3",
                              "MYO1F")
@@ -149,6 +154,7 @@ geneEntries <- function(query){
                      "FANCA","SPC24","KIF14","POLQ","WDR76","FAM83D","WDHD1","XRCC2","DEPDC1",
                      "ERCC6L","RDM1","DIAPH3","NCAPH","CLSPN","GSG2","E2F8","FANCB","GTSE1",
                      "DEPDC1B","BRIP1","ARHGAP11A","LOC100288637")
+  Pyroptosis <- c("CASP1", "CASP4", "CASP5", "CASP11", "GSDMD", "GSDME")
   Ras <- c("LGALS3","DUSP6","S100A6","PHLDA1","SPRY4","SPRY2","EPHA2","CD97","ETV4","FOSL1",
            "SLCO4A1")
   Roh_Immune_Score <- c("GZMA","GZMB","PRF1", "GNLY", "HLA-A","HLA-B","HLA-C","HLA-E",
