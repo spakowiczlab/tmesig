@@ -23,7 +23,7 @@ geneEntries <- function(query){
   Auslander <- c("CD86", "CD40", "PD-1", "OX40L", "CD28", "PDL-1", "CD80",
                  "VISTA", "TIM-3", "HVEM", "CTLA4", "CD276", "CD27", "CD200",
                  "CD137L")
-  Autophagy <- c("ATG5", "ATG7", "MAP1LC3A", "MAP1LC3B", "TFEB")
+  Autophagy <- c("BECN1", "ATG5", "ATG7", "MAP1LC3B", "ULK1", "SQSTM1", "ATG12", "GABARAP", "TFEB")
   Chaurio <- c("CD3E", "CD8A", "IFNG", "PRF1", "CXCL13", "IGHA1", "IGHG1")
   Chemokine <- c("CCL2","CCL3","CCL4","CCL5","CCL8","CCL18","CCL19","CCL21","CXCL9",
                  "CXCL10","CXCL11","CXCL13")
@@ -154,7 +154,7 @@ geneEntries <- function(query){
                      "FANCA","SPC24","KIF14","POLQ","WDR76","FAM83D","WDHD1","XRCC2","DEPDC1",
                      "ERCC6L","RDM1","DIAPH3","NCAPH","CLSPN","GSG2","E2F8","FANCB","GTSE1",
                      "DEPDC1B","BRIP1","ARHGAP11A","LOC100288637")
-  Pyroptosis <- c("CASP1", "CASP4", "CASP5", "CASP11", "GSDMD", "GSDME")
+  Pyroptosis <- c("AIM2", "CASP1", "CASP4", "CASP5", "GSDMD", "GSDME", "IL1B", "NLRP3")
   Ras <- c("LGALS3","DUSP6","S100A6","PHLDA1","SPRY4","SPRY2","EPHA2","CD97","ETV4","FOSL1",
            "SLCO4A1")
   Roh_Immune_Score <- c("GZMA","GZMB","PRF1", "GNLY", "HLA-A","HLA-B","HLA-C","HLA-E",
