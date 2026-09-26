@@ -1,29 +1,36 @@
-#' Calculate Average Z Score
-#'Calculates the average z score for any given genes within a gene score. This function was originally intended to work in conjunction with the geneEntries function
-#' @param gene_matrix a data frame where columns are samples and rows are genes. Gene symbols are expected as a column labeled "Gene.Symbol".
-#' @param genes the specific gene signature that will be used
+#' Average z-score of a gene signature
 #'
-#' @return A data set with all the genes within the requested gene symbol
-#' group and the average z score for each gene. Check if all the
-#' genes within "genes" are present in "gene_matrix".
-#' Function will return true if all genes are present and
-#' return false if there are missing genes and list out missing genes.
+#' Standardizes each gene across samples, then returns the mean z-score of the
+#' requested genes for each sample. Built-in signatures come from [geneEntries()].
+#' Symbols that are absent from `gene_matrix` are reported with `message()` and left out of the mean.
+#' @param gene_matrix A data frame with samples in columns and gene symbols in a
+#'   column named `Gene.Symbol`.
+#' @param genes Character vector of gene symbols to score.
+#' @return A data frame with columns `sample` and `avg_z_score`.
+#' @importFrom dplyr %>%
 #' @export
 #'
-#' @examples calculateAvgZScore(gene_matrix = dataframe, genes = geneEntries("IFNg_18")), calculateAvgZScore(gene_matrix = expressions, gene_list = c("RNF43","BMP4","TSPAN8","PPP1R1B","SLC44A4","C9orf152","VWA2","AXIN2","SP5","NKD1","CFTR"))
+#' @examples
+#' expr <- data.frame(
+#'   Gene.Symbol = c("GZMA", "PRF1", "CD8A"),
+#'   sample1 = c(10, 5, 8),
+#'   sample2 = c(1, 2, 3),
+#'   sample3 = c(4, 6, 2)
+#' )
+#' calculateAvgZScore(expr, genes = c("GZMA", "PRF1"))
 calculateAvgZScore <- function(gene_matrix, genes){
   gene_missing <- checkGenes(gene_matrix$Gene.Symbol, score = NULL,
                              expected.genes = genes)
   if(length(gene_missing) > 0){
     mis.genes.short <- paste(gene_missing, collapse = ",")
     warn.message <- paste("Genes missing from set:", mis.genes.short)
-    print(warn.message)
+    message(warn.message)
 
   }
   avg_z_score <- gene_matrix %>%
     tidyr::pivot_longer(-Gene.Symbol,names_to = "sample", values_to = "counts" )%>%
     dplyr::group_by(Gene.Symbol)%>%
-    dplyr::mutate(Average = mean(counts), std_dev = sd(counts))%>%
+    dplyr::mutate(Average = mean(counts), std_dev = stats::sd(counts))%>%
     dplyr::ungroup()%>%
     dplyr::mutate(z_score = (counts - Average) / std_dev)%>%
     dplyr::filter(Gene.Symbol %in% genes)%>%

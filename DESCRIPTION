@@ -1,6 +1,6 @@
 Package: tmesig
 Type: Package
-Title: Tumor Micro-Environment expression SIGnatures
+Title: Tumor Micro-Environment Expression SIGnatures
 Version: 0.1.0
 Authors@R:
     c(person(given = "Rebecca", 
@@ -17,13 +17,15 @@ Authors@R:
            email = "daniel.spakowicz@osumc.edu",
            comment = c(ORCID = "0000-0003-2314-6435"))
      )
+Author: Rebecca Hoyd [aut] (ORCID: <https://orcid.org/0000-0003-1210-4491>), Caroline Wheeler [aut] (ORCID: <https://orcid.org/0000-0002-3374-4909>), Daniel Spakowicz [aut, cre] (ORCID: <https://orcid.org/0000-0003-2314-6435>)
 Maintainer: Daniel Spakowicz <daniel.spakowicz@osumc.edu>
-Description: This package contains functions to calcualate expression signatures using gene expression data. Most have been published elsewhere, but not implemented in a package.
-License: MIT
+Description: Calculates tumor-microenvironment and tumor-cell expression signature scores from a bulk gene-expression matrix. Provides published gene sets and scoring methods for immune activity, hypoxia, an OCR-score of mitochondrial oxygen demand, and small-cell neuroendocrine phenotype.
+License: MIT + file LICENSE
 Encoding: UTF-8
+Depends: R (>= 3.5.0)
 LazyData: true
 RoxygenNote: 7.2.3
 Imports: 
     dplyr,
     tidyr
-Date: 2021-12-14
+Date: 2026-09-25

@@ -7,7 +7,7 @@
 inputGenes(query)
 }
 \arguments{
-\item{query}{The name of the score whose associated genes are to be pulled. c("Mitoscore", "Buffa")}
+\item{query}{The name of the score whose associated genes are to be pulled. c("OCRscore", "Buffa")}
 }
 \value{
 A character vector of the genes symbols associated with the queried score

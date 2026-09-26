@@ -17,5 +17,6 @@ A data frame where samples are reported with their SCN scores.
 \description{
 This score is calculated by summing the weighted expressions of many genes. This method is described
 in the paper "Pan-cancer Convergence to a Small-Cell Neuroendocrine Phenotype that Shares Susceptibilities with Hematological Malignancies"
-(Balanis et al. Cancer Cell 2019). All genes and weights are available using data(SCNweights).
+(Balanis et al. Cancer Cell 2019). The PC1 weights ship with the package;
+\code{data(SCNweights)} loads them.
 }

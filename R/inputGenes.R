@@ -1,10 +1,10 @@
 #' Pull gene inputs for various score calculations
-#' @param query The name of the score whose associated genes are to be pulled. c("Mitoscore", "Buffa")
+#' @param query The name of the score whose associated genes are to be pulled. c("OCRscore", "Buffa")
 #' @return A character vector of the genes symbols associated with the queried score
 #' @export
 
 inputGenes <- function(query){
-  Mitoscore <- c("ATP5F1B", "ATP5F1C", "ATP5F1D", "ATP5F1E", "ATP5IF1", "ATP5MC1",
+  OCRscore <- c("ATP5F1B", "ATP5F1C", "ATP5F1D", "ATP5F1E", "ATP5IF1", "ATP5MC1",
                  "ATP5MC2", "ATP5MC3", "ATP5ME", "ATP5MF", "ATP5MG", "ATP5PB",
                  "ATP5PD", "ATP5PF", "ATP5PO", "COX11", "COX15", "COX17", "COX4I1",
                  "COX5A", "COX5B", "COX6A1", "COX6A2", "COX6B1", "COX6C", "COX7A1",
@@ -24,8 +24,8 @@ inputGenes <- function(query){
              "GAPDH", "SLC16A1", "YKT6", "RBM35A", "KIF20A", "TUBA1B", "TUBA1C", "CHCHD2", "ANLN",
              "PSRC1", "KIF4A", "CTSL2", "LRRC42")
 
-  genes.list <- list(Mitoscore, Buffa)
-  names(genes.list) <- c("Mitoscore", "Buffa")
+  genes.list <- list(OCRscore, Buffa)
+  names(genes.list) <- c("OCRscore", "Buffa")
 
   genes.queried <- genes.list[[query]]
   return(genes.queried)

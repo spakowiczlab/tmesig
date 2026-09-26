@@ -2,21 +2,22 @@
 % Please edit documentation in R/geneEntries.R
 \name{geneEntries}
 \alias{geneEntries}
-\title{Gene Entries
-A function that can be used to call of specific gene signatures. This functions is originally intended to be used with the calculateAvgZScore function}
+\title{Gene signatures for calculateAvgZScore}
 \usage{
 geneEntries(query)
 }
 \arguments{
-\item{query}{Name of the signature group. If query is passed "all" function will return all the signature groups}
+\item{query}{Name of a signature, or \code{"all"}.}
 }
 \value{
-The genes within a desired signature group
+A character vector of gene symbols, or a named list of those vectors
+when \code{query} is \code{"all"}. An unknown name returns \code{NULL}.
 }
 \description{
-Gene Entries
-A function that can be used to call of specific gene signatures. This functions is originally intended to be used with the calculateAvgZScore function
+Returns the gene symbols in one built-in signature, or every signature when
+\code{query} is \code{"all"}. Pass the result to \code{\link[=calculateAvgZScore]{calculateAvgZScore()}}.
 }
 \examples{
 geneEntries("IFNg_18")
+geneEntries("Apoptosis")
 }

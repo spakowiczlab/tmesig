@@ -1,11 +1,16 @@
-#' Gene Entries
-#' A function that can be used to call of specific gene signatures. This functions is originally intended to be used with the calculateAvgZScore function
-#' @param query Name of the signature group. If query is passed "all" function will return all the signature groups
+#' Gene signatures for calculateAvgZScore
 #'
-#' @return The genes within a desired signature group
+#' Returns the gene symbols in one built-in signature, or every signature when
+#' `query` is `"all"`. Pass the result to [calculateAvgZScore()].
+#' @param query Name of a signature, or `"all"`.
+#'
+#' @return A character vector of gene symbols, or a named list of those vectors
+#'   when `query` is `"all"`. An unknown name returns `NULL`.
 #' @export
 #'
-#' @examples geneEntries("IFNg_18")
+#' @examples
+#' geneEntries("IFNg_18")
+#' geneEntries("Apoptosis")
 geneEntries <- function(query){
   IFNg_18 <- c("CD3D","IL2RG","NKG7","CIITA","HLA-E","CD3E","CXCR6","CCL5",
                "LAG3","TAGAP","GZMK","CD2", "IDO1","CXCL10","HLA-DRA","STAT1",
@@ -184,18 +189,20 @@ geneEntries <- function(query){
                     Chaurio, Chemokine, Chemotaxis, Cytotoxic, Effector_T_Cell, Glycolysis,
                     gMDSC, Huang_NRS, Hypoxia, IFNg_6, IFNg_Effector_T_Cells,
                     Ipi_neoadjuvant, MHC_I, MHC_II, MHC_II_Hsueh, mMDSC, MYC, NADPH_Oxidase,
-                    Neutrophil_Activation,Ock_Immune_Sig_Score, Pan, Phagocytosis , Proliferation,
+                    Neutrophil_Activation, Ock_Immune_Sig_Score, Pan, Phagocytosis, Proliferation,
                     Ras, Roh_Immune_Score, Rooney_Immune_Cytolytic, Stroma, TIP_Hot,
-                    TLS, LKB1_loss, Tcell.Senescence, CellDeath)
+                    TLS, LKB1_loss, Tcell.Senescence, Apoptosis, Autophagy, Ferroptosis,
+                    Necroptosis, Pyroptosis, CellDeath)
 
   names(gene_list) <- c("IFNg_18", "WNT", "Adenosine", "Angiogenesis", "Auslander",
                         "Chaurio", "Chemokine", "Chemotaxis", "Cytotoxic", "Effector_T_Cell",
-                        "Glycolysis","gMDSC", "Huang_NRS", "Hypoxia", "IFNg_6", "IFNg_Effector_T_Cells",
+                        "Glycolysis", "gMDSC", "Huang_NRS", "Hypoxia", "IFNg_6", "IFNg_Effector_T_Cells",
                         "Ipi_neoadjuvant", "MHC_I", "MHC_II", "MHC_II_Hsueh", "mMDSC", "MYC",
                         "NADPH_Oxidase", "Neutrophil_Activation", "Ock_Immune_Sig_Score",
                         "Pan", "Phagocytosis", "Proliferation", "Ras", "Roh_Immune_Score",
                         "Rooney_Immune_Cytolytic", "Stroma", "TIP_Hot", "TLS", "LKB1_loss",
-                        "Tcell.Senescence", "CellDeath")
+                        "Tcell.Senescence", "Apoptosis", "Autophagy", "Ferroptosis",
+                        "Necroptosis", "Pyroptosis", "CellDeath")
 
   if(query == "all"){
     return(gene_list)

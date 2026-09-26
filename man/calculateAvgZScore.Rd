@@ -2,27 +2,30 @@
 % Please edit documentation in R/calculateAvgZScore.R
 \name{calculateAvgZScore}
 \alias{calculateAvgZScore}
-\title{Calculate Average Z Score
-Calculates the average z score for any given genes within a gene score. This function was originally intended to work in conjunction with the geneEntries function}
+\title{Average z-score of a gene signature}
 \usage{
 calculateAvgZScore(gene_matrix, genes)
 }
 \arguments{
-\item{gene_matrix}{a data frame where columns are samples and rows are genes. Gene symbols are expected as a column labeled "Gene.Symbol".}
+\item{gene_matrix}{A data frame with samples in columns and gene symbols in a
+column named \code{Gene.Symbol}.}
 
-\item{genes}{the specific gene signature that will be used}
+\item{genes}{Character vector of gene symbols to score.}
 }
 \value{
-A data set with all the genes within the requested gene symbol
-group and the average z score for each gene. Check if all the
-genes within "genes" are present in "gene_matrix".
-Function will return true if all genes are present and
-return false if there are missing genes and list out missing genes.
+A data frame with columns \code{sample} and \code{avg_z_score}.
 }
 \description{
-Calculate Average Z Score
-Calculates the average z score for any given genes within a gene score. This function was originally intended to work in conjunction with the geneEntries function
+Standardizes each gene across samples, then returns the mean z-score of the
+requested genes for each sample. Built-in signatures come from \code{\link[=geneEntries]{geneEntries()}}.
+Symbols that are absent from \code{gene_matrix} are reported with \code{message()} and left out of the mean.
 }
 \examples{
-calculateAvgZScore(gene_matrix = dataframe, genes = geneEntries("IFNg_18")), calculateAvgZScore(gene_matrix = expressions, gene_list = c("RNF43","BMP4","TSPAN8","PPP1R1B","SLC44A4","C9orf152","VWA2","AXIN2","SP5","NKD1","CFTR"))
+expr <- data.frame(
+  Gene.Symbol = c("GZMA", "PRF1", "CD8A"),
+  sample1 = c(10, 5, 8),
+  sample2 = c(1, 2, 3),
+  sample3 = c(4, 6, 2)
+)
+calculateAvgZScore(expr, genes = c("GZMA", "PRF1"))
 }
