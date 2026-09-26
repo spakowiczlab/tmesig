@@ -1,6 +1,4 @@
-# tmesig <img src="man/figures/hex-sticker.png" align="right" width="200" alt="tmesig hex sticker" />
-
-## Tumor Micro-Environment Expression SIGnatures
+<h1>tmesig <img src="man/figures/hex-sticker.png" align="right" width="200" alt="tmesig hex sticker"><br><sub>Tumor Micro-Environment Expression SIGnatures</sub></h1>
 
 [![DOI](https://zenodo.org/badge/424702817.svg)](https://zenodo.org/badge/latestdoi/424702817)
 
